@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Raleway;
+}
+
+/* Hero  */
+.hero-section {
+  padding: 50px 30px;
+}
+.hero-head {
+  color: #1a1a1a;
+  font-size: 75px;
+  font-weight: bold;
+  text-align: center;
+}
+.grad-text {
+  font-size: 75px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #5895f0 0%, #f1b662 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.hero-para {
+  color: #1a1a1a;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.hero-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.gradient-btn {
+  background: linear-gradient(90deg, #5895f0 0%, #f1b662 100%);
+  color: white;
+  border: none;
+  padding: 12px 60px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(88, 149, 240, 0.3);
+}
+.gradient-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Features  */
+.feature-section {
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sub-section {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.teal {
+  position: absolute;
+  left: 80px;
+  top: -10px;
+}
+
+.teal img {
+  width: 34px;
+  height: 34px;
+}
+.red {
+  position: absolute;
+  right: 80px;
+  bottom: 40px;
+}
+
+.red img {
+  width: 34px;
+  height: 34px;
+}
+.feature-head {
+  align-self: center;
+}
+.feature-head h1 {
+  max-width: 840px;
+  font-size: 54px;
+  font-weight: 600;
+  margin: 0 auto;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+}
+.grafterr {
+  color: #777777;
+}
+
+.feature-para {
+  font-size: 24px;
+  color: #777777;
+}
+
+@media (max-width: 768px) {
+  .teal {
+    left: 20px;
+    top: 10px;
+  }
+
+  .red {
+    right: 20px;
+    bottom: 10px;
+  }
+
+  .feature-head h1 {
+    font-size: 32px;
+  }
+}
