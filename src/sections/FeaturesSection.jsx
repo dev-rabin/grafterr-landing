@@ -1,8 +1,16 @@
 import React from "react";
 import TealImg from "../assets/teal.png";
 import RedImg from "../assets/red.png";
+import { useContent } from "../hooks/useContent";
+import { fetchFeaturesContent } from "../services/api";
+import Carousel from "../components/Carousel";
+import FeaturesSkeleton from "../components/ui/Skeleton/FeatureSkeleton";
 
 const FeaturesSection = () => {
+  const { data, loading, error, retry } = useContent(fetchFeaturesContent);
+  if (loading) return <FeaturesSkeleton/>;
+  if (error) return <button onClick={retry}>Retry</button>;
+
   return (
     <>
       <section className="feature-section">
@@ -12,20 +20,19 @@ const FeaturesSection = () => {
           </div>
           <div className="feature-head">
             <h1>
-              More ways <span className="grafterr">Grafterr </span>
-              <span>can help you grow your business</span>
+              {data.title} <span className="grafterr">{data.grafterr} </span>
+              <span>{data.accent}</span>
             </h1>
-            <p className="feature-para">
-              An award-winning, end-to-end restaurant technology & payments
-              platform, designed to streamline food service and automate complex
-              venue operations
-            </p>
+            <p className="feature-para">{data.subtitle}</p>
           </div>
           <div className="red">
             <img src={RedImg} alt="Red" />
           </div>
         </div>
       </section>
+      <div className="carousel-wrapper">
+        <Carousel items={data.products} />
+      </div>
     </>
   );
 };

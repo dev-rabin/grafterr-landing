@@ -130,3 +130,109 @@ body {
     font-size: 32px;
   }
 }
+
+.carousel {
+  width: 100%;
+  position: relative;
+  padding: 40px 0;
+}
+
+.carousel-indicator {
+  width: 200px;
+  height: 4px;
+  background: #ddd;
+  margin: 0 auto 30px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.indicator-progress {
+  height: 100%;
+  background: #333;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.carousel-window {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-item {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #f5f5f5;
+  border-radius: 16px;
+  height: 702px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  font-size: 34px;
+  font-weight: 600;
+  padding: 30px;
+}
+
+.image-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.carousel-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.carousel-arrows button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #e0e0e0;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.carousel-arrows button:hover {
+  background: #d0d0d0;
+}
+
+.skeleton {
+  background: #e5e7eb;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}

@@ -1,23 +1,27 @@
 import React from "react";
+import { useContent } from "../hooks/useContent";
+import { fetchHeroContent } from "../services/api";
+import HeroSkeleton from "../components/ui/Skeleton/HeroSkeleton";
 
 const HeroSection = () => {
-  return (
-    <>
-      <section className="hero-section">
-        <h1 className="hero-head">
-          Looking for a new <br />
-          <span className="grad-text">technology provider?</span>
-        </h1>
+  const { data, loading, error, retry } = useContent(fetchHeroContent);
 
-        <p className="hero-para">
-          Explore our <strong>success stories</strong> to see how businesses
-          like yours have transformed with Grafterr's technology.
-        </p>
-        <div className="hero-btn-wrapper">
-          <button className="gradient-btn">Learn more</button>
-        </div>
-      </section>
-    </>
+  if (loading) return <HeroSkeleton />;
+  if (error) return <button onClick={retry}>Retry</button>;
+
+  return (
+    <section className="hero-section">
+      <h1 className="hero-head">
+        {data.headlinePrefix} <br />
+        <span className="grad-text">{data.headlineGradient}</span>
+      </h1>
+
+      <p className="hero-para">{data.subheadline}</p>
+
+      <div className="hero-btn-wrapper">
+        <button className="gradient-btn">{data.cta}</button>
+      </div>
+    </section>
   );
 };
 

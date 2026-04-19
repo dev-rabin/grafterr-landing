@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "headlinePrefix": "Looking for a new",
+    "headlineGradient": "technology provider?",
+    "subheadline": "Explore our success stories to see how businesses like yours have transformed with Grafterr's technology.",
+    "cta": "Learn more"
+  },
+  "features": {
+    "title": "More ways",
+    "grafterr": "Grafterr ",
+    "accent": "can help you grow your business",
+    "subtitle": "An award-winning, end-to-end restaurant technology & payments platform, designed to streamline food service and automate complex venue operations.",
+    "products": [
+      {
+        "title": "Point of Sale",
+        "image": "/images/image1.png"
+      },
+      {
+        "title": "Self-service",
+        "image": "/images/image2.png"
+      },
+      {
+        "title": "Kitchen Management",
+        "image": "/images/image3.png"
+      },
+      {
+        "title": "Point of Sale",
+        "image": "/images/image1.png"
+      },
+      {
+        "title": "Self-service",
+        "image": "/images/image2.png"
+      },
+      {
+        "title": "Kitchen Management",
+        "image": "/images/image3.png"
+      }
+    ]
+  }
+}
