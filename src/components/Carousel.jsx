@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useCarousel } from "../hooks/useCarousel";
+import ProductCard from "./ProductCard";
 
 const Carousel = ({ items }) => {
   const [itemsPerView, setItemsPerView] = useState(3);
@@ -42,15 +43,7 @@ const Carousel = ({ items }) => {
               key={i}
               style={{ flex: `0 0 ${100 / itemsPerView}%` }}
             >
-              <div className="card">
-                <div className="card-content">
-                  <h3>{item.title}</h3>
-                </div>
-
-                <div className="image-wrapper">
-                  <img src={item.image} alt={item.title} />
-                </div>
-              </div>
+              <ProductCard item={item} />
             </div>
           ))}
         </div>

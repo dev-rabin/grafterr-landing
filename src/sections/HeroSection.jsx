@@ -2,6 +2,8 @@ import React from "react";
 import { useContent } from "../hooks/useContent";
 import { fetchHeroContent } from "../services/api";
 import HeroSkeleton from "../components/ui/Skeleton/HeroSkeleton";
+import GradientText from "../components/ui/GradientText";
+import GradientButton from "../components/ui/GradientButton";
 
 const HeroSection = () => {
   const { data, loading, error, retry } = useContent(fetchHeroContent);
@@ -13,13 +15,13 @@ const HeroSection = () => {
     <section className="hero-section">
       <h1 className="hero-head">
         {data.headlinePrefix} <br />
-        <span className="grad-text">{data.headlineGradient}</span>
+        <GradientText children={data.headlineGradient} />
       </h1>
 
       <p className="hero-para">{data.subheadline}</p>
 
       <div className="hero-btn-wrapper">
-        <button className="gradient-btn">{data.cta}</button>
+        <GradientButton children={data.cta} />
       </div>
     </section>
   );

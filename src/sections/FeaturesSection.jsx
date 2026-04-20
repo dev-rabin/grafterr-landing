@@ -8,7 +8,7 @@ import FeaturesSkeleton from "../components/ui/Skeleton/FeatureSkeleton";
 
 const FeaturesSection = () => {
   const { data, loading, error, retry } = useContent(fetchFeaturesContent);
-  if (loading) return <FeaturesSkeleton/>;
+  if (loading) return <FeaturesSkeleton />;
   if (error) return <button onClick={retry}>Retry</button>;
 
   return (
@@ -23,11 +23,11 @@ const FeaturesSection = () => {
               {data.title} <span className="grafterr">{data.grafterr} </span>
               <span>{data.accent}</span>
             </h1>
-            <p className="feature-para">{data.subtitle}</p>
           </div>
           <div className="red">
             <img src={RedImg} alt="Red" />
           </div>
+          <p className="feature-para">{data.subtitle}</p>
         </div>
       </section>
       <div className="carousel-wrapper">

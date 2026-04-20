@@ -115,22 +115,6 @@ body {
   color: #777777;
 }
 
-@media (max-width: 768px) {
-  .teal {
-    left: 20px;
-    top: 10px;
-  }
-
-  .red {
-    right: 20px;
-    bottom: 10px;
-  }
-
-  .feature-head h1 {
-    font-size: 32px;
-  }
-}
-
 .carousel {
   width: 100%;
   position: relative;
@@ -234,5 +218,60 @@ body {
   }
   100% {
     opacity: 0.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .teal {
+    left: 20px;
+    top: 10px;
+  }
+
+  .red {
+    right: 20px;
+    bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-head,
+  .grad-text {
+    font-size: 56px;
+  }
+  .feature-head h1 {
+    font-size: 40;
+  }
+  .feature-para {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-head,
+  .grad-text {
+    font-size: 40px;
+  }
+  .hero-para {
+    font-size: 20px;
+  }
+  .feature-head h1 {
+    font-size: 32px;
+  }
+  .feature-section {
+    margin-top: 0;
+  }
+  .feature-para {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-head,
+  .grad-text {
+    font-size: 30px;
+  }
+  .feature-head h1 {
+    font-size: 24px;
+  }
+  .feature-para {
+    font-size: 16px;
   }
 }
